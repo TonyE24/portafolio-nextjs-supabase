@@ -3,11 +3,9 @@ import { Server, ShieldCheck, Database } from 'lucide-react';
 import { getProyectos } from '@/lib/supabase';
 import ProyectoCard from '@/components/ProyectoCard';
 
-// Fuerza renderizado dinámico o revalidación periódica para reflejar cambios en Supabase
-export const revalidate = 60;
-
 export default async function HomePage() {
   const proyectos = await getProyectos();
+  // ... el resto del código sigue igual
 
   // Extraer categorías únicas desde los registros
   const categorias = Array.from(
